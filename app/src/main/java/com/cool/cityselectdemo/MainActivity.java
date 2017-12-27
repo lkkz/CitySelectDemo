@@ -1,14 +1,28 @@
-# CitySelectDemo
-仿京东省市区三级联动
-##效果图
-![省市区3级联动.gif](image/city.gif)
+package com.cool.cityselectdemo;
 
-##使用
+import android.graphics.Color;
+import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
+import android.view.View;
+import android.widget.LinearLayout;
+import android.widget.Toast;
 
-* 弹dialog的形式
+import com.cool.selectlibrary.CitySelect;
 
-```
-new CitySelect(this)
+public class MainActivity extends AppCompatActivity {
+
+    private LinearLayout mContainer;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+        mContainer = (LinearLayout) findViewById(R.id.ll_container);
+    }
+
+    public void dialog(View view){
+        new CitySelect(this)
                 .setMainColor(Color.RED)
                 .listener(new CitySelect.OnSelectListener() {
                     @Override
@@ -18,11 +32,10 @@ new CitySelect(this)
                     }
                 }).dialog()
                 .show();
-```
-* 布局中使用
+    }
 
-```
-if(mContainer.getChildCount() != 0){
+    public void layout(View view){
+        if(mContainer.getChildCount() != 0){
             mContainer.removeAllViews();
         }
         CitySelect citySelect = new CitySelect(this)
@@ -36,6 +49,4 @@ if(mContainer.getChildCount() != 0){
         });
         mContainer.addView(citySelect.getView());
     }
-```
-
-特别感谢 _有时丶提供[数据来源](http://blog.csdn.net/youshi520000/article/details/70808580)
+}
