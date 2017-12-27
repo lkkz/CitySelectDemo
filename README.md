@@ -6,6 +6,11 @@
 
 ## 使用
 
+```
+compile 'com.cool:cityselect:1.0.0'
+```
+
+
 * 弹dialog的形式
 
 ```

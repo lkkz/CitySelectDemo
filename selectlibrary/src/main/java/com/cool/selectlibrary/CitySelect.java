@@ -328,7 +328,7 @@ public class CitySelect implements View.OnClickListener, AdapterView.OnItemClick
     /**
      * 创建并返回dialog
      *
-     * @return
+     * @return Dialog
      */
     public Dialog dialog() {
         removeParentFirstifExit();
