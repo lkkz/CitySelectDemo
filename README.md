@@ -1,9 +1,10 @@
 # CitySelectDemo
 仿京东省市区三级联动
-##效果图
+## 效果图
+
 ![省市区3级联动.gif](image/city.gif)
 
-##使用
+## 使用
 
 * 弹dialog的形式
 
