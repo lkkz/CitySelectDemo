@@ -39,4 +39,10 @@ if(mContainer.getChildCount() != 0){
     }
 ```
 
+## 如果需要导入自己的数据，调用此方法
+
+```
+setProvinceData(List<Province> provinces)
+```
+
 特别感谢 _有时丶提供[数据来源](http://blog.csdn.net/youshi520000/article/details/70808580)

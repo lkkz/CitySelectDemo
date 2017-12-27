@@ -367,6 +367,7 @@ public class CitySelect implements View.OnClickListener, AdapterView.OnItemClick
      */
     public CitySelect setProvinceData(List<Province> provinces) {
         this.mProvinces = provinces;
+        fillProvincesData();
         return this;
     }
 
