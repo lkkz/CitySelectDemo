@@ -206,6 +206,7 @@ public class CitySelect implements View.OnClickListener, AdapterView.OnItemClick
      * 填充省数据
      */
     private void fillProvincesData() {
+        mProvinceData.clear();
         for (Province province : mProvinces) {
             mProvinceData.add(province.name);
         }
