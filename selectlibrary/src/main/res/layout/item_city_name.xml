@@ -9,12 +9,11 @@
         android:text="上海"
         android:layout_marginLeft="10dp"
         android:gravity="center"/>
-    <ImageView
-        android:id="@+id/iv_check"
+    <com.cool.selectlibrary.CheckView
+        android:id="@+id/checkview"
         android:layout_width="25dp"
-        android:layout_height="25dp"
-        android:layout_gravity="center_vertical"
+        android:visibility="visible"
         android:layout_marginLeft="10dp"
-        android:visibility="invisible"
-        android:background="@drawable/check"/>
+        android:layout_gravity="center_vertical"
+        android:layout_height="25dp" />
 </LinearLayout>

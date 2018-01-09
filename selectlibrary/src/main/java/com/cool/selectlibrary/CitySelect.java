@@ -414,7 +414,7 @@ public class CitySelect implements View.OnClickListener, AdapterView.OnItemClick
                 convertView = layoutInflater.inflate(R.layout.item_city_name, parent, false);
                 viewHolder = new ViewHolder();
                 viewHolder.mTextView = convertView.findViewById(R.id.tv_text);
-                viewHolder.mCheckImageView = convertView.findViewById(R.id.iv_check);
+                viewHolder.mCheckview = convertView.findViewById(R.id.checkview);
                 convertView.setTag(viewHolder);
             } else {
                 viewHolder = (ViewHolder) convertView.getTag();
@@ -422,28 +422,26 @@ public class CitySelect implements View.OnClickListener, AdapterView.OnItemClick
 
             String city = mData.get(position);
             viewHolder.mTextView.setText(city);
-            viewHolder.mCheckImageView.setVisibility(View.INVISIBLE);
-            VectorDrawableCompat vectorDrawableCompat = VectorDrawableCompat.create(mContext.getResources(), R.drawable.check, mContext.getTheme());
-            vectorDrawableCompat.setTint(mainColor);
-            viewHolder.mCheckImageView.setImageDrawable(vectorDrawableCompat);
+            viewHolder.mCheckview.setVisibility(View.INVISIBLE);
+            viewHolder.mCheckview.setColor(mainColor);
             viewHolder.mTextView.setTextColor(Color.BLACK);
 
             switch (tabSelect) {
                 case TAB_PROVINCE://省
                     if (provinceSelectIndex == position) {
-                        viewHolder.mCheckImageView.setVisibility(View.VISIBLE);
+                        viewHolder.mCheckview.setVisibility(View.VISIBLE);
                         viewHolder.mTextView.setTextColor(mainColor);
                     }
                     break;
                 case TAB_CITY://市
                     if (citySelectIndex == position) {
-                        viewHolder.mCheckImageView.setVisibility(View.VISIBLE);
+                        viewHolder.mCheckview.setVisibility(View.VISIBLE);
                         viewHolder.mTextView.setTextColor(mainColor);
                     }
                     break;
                 case TAB_AREA://区
                     if (areaSelectIndex == position) {
-                        viewHolder.mCheckImageView.setVisibility(View.VISIBLE);
+                        viewHolder.mCheckview.setVisibility(View.VISIBLE);
                         viewHolder.mTextView.setTextColor(mainColor);
                     }
                     break;
@@ -455,7 +453,7 @@ public class CitySelect implements View.OnClickListener, AdapterView.OnItemClick
 
         class ViewHolder {
             public TextView mTextView;
-            public ImageView mCheckImageView;
+            public CheckView mCheckview;
         }
     }
 }

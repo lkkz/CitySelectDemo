@@ -26,7 +26,7 @@ publish {
     userOrg = 'coollkkz'//bintray.com用户名
     groupId = 'com.cool'//jcenter上的路径
     artifactId = 'cityselect'//项目名称
-    publishVersion = '1.0.0'//版本号
+    publishVersion = '1.0.2'//版本号
     desc = 'select city'//描述，不重要
     website = 'https://github.com/lkkz/CitySelectDemo'//网站，不重要,如果有自己的网站就放上去吧
 }
